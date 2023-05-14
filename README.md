@@ -7,16 +7,26 @@
 
 ## Libraries
 
+
 **axios** </br>
- `npm i axios`</br>
+ ```
+ npm i axios
+ ```
+ </br>
 Axios is a JavaScript library used for making HTTP requests. In this code, Axios is used to make an HTTP GET request to the specified URL https://www.[terriblytinytales.com/test.txt] in order to fetch the contents of a text file.
 
 **React-icon**</br>
-`npm install react-icons --save`</br>
+```
+npm install react-icons --save
+```
+</br>
 this librarie is used for putting icon on web page
 
 **Recharts**</br> 
- `npm i recharts`</br>
+ ```
+ npm i recharts
+ ```
+ </br>
 In this code, the `import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend }` from `"recharts"` statement imports specific components from the Recharts library. These components are used to create a histogram chart of the top 20 most occurring words in the text file.
 
 `BarChart`: This component creates a bar chart, which is used to display the frequency counts of the top 20 words.
