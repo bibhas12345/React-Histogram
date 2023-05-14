@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Deployment
+`Here is the live link of this project`
+-[https://react-histogram.netlify.app/]
 
-### `npm start`
+## Libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**axios** </br>
+ `npm i axios`</br>
+Axios is a JavaScript library used for making HTTP requests. In this code, Axios is used to make an HTTP GET request to the specified URL https://www.[terriblytinytales.com/test.txt] in order to fetch the contents of a text file.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**React-icon**</br>
+`npm install react-icons --save`</br>
+this librarie is used for putting icon on web page
 
-### `npm test`
+**Recharts**</br> 
+ `npm i recharts`</br>
+In this code, the `import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend }` from `"recharts"` statement imports specific components from the Recharts library. These components are used to create a histogram chart of the top 20 most occurring words in the text file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`BarChart`: This component creates a bar chart, which is used to display the frequency counts of the top 20 words.
 
-### `npm run build`
+`Bar`: This component creates individual bars within the bar chart, representing the frequency count of each word.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`XAxis`: This component creates the x-axis of the chart, which displays the top 20 words with the highest frequency counts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`YAxis`: This component creates the y-axis of the chart, which displays the frequency count values.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`CartesianGrid`: This component creates a grid of horizontal and vertical lines behind the bars to make it easier to read the chart.
 
-### `npm run eject`
+`Tooltip`: This component adds a tooltip to each bar, displaying the word and its frequency count.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`Legend`: This component creates a legend for the chart, which is not used in this code.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Tailwind css:**
+Here I used little bit Tailwind css to add some style and color for styling the page.</br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Whole code is written in `Tiny.js` file and here the parent comoponent is `App.js.`
+The code imports the necessary libraries, including React itself, axios for HTTP requests, and recharts for the histogram chart. It defines a functional component `App`1 that renders the submit button and the histogram chart, and handles the fetching of the data, parsing it into a histogram, and exporting the histogram data as a CSV file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The state of the component is managed using the `useState` hook, with `histogramData` representing the data for the histogram chart, and `isLoading` indicating whether a request is currently being made.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When the user clicks the submit button, the `fetchData` function is called, which sets the`isLoading` state to true, makes an HTTP request to the specified URL, and parses the response into a histogram object, with each word as a key and its frequency as a value. The `Object.entries` function is then used to convert the histogram object into an array of objects, where each object has a `word` and `count` property.
