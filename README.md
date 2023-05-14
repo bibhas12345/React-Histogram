@@ -13,7 +13,7 @@
  npm i axios
  ```
  </br>
-Axios is a JavaScript library used for making HTTP requests. In this code, Axios is used to make an HTTP GET request to the specified URL https://www.[terriblytinytales.com/test.txt] in order to fetch the contents of a text file.
+Axios is a JavaScript library used for making HTTP requests. In this code, Axios is used to make an HTTP GET request to the specified URL https://www.terriblytinytales.com/test.txt in order to fetch the contents of a text file.
 
 **React-icon**</br>
 ```
