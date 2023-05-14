@@ -45,7 +45,7 @@ const Tiny1 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full h-[650px]">
-      <img src={img1} className="w-[60px] h-[60px] rounded-full shadow-sm shadow-black"/>
+      <img src={img1} className="w-[60px] h-[60px] rounded-full shadow-sm shadow-black" alt="/"/>
       <h1 className="text-3xl font-bold text-orange-400">Wellcome TERRIBLY TINY TALES</h1>
       <button className="mt-5 bg-green-500 hover:bg-green-100 hover:text-blue-500 rounded-md text-white px-3 p-1" onClick={fetchData} disabled={isLoading}>
         {isLoading ? "Loading..." : "Submit"}
